@@ -4,6 +4,7 @@ import Form from './components/Form';
 import Weather from './components/Weather';
 
 import axios from 'axios';
+import './App.css';
 
 const App = () => {
   const key = process.env.REACT_APP_API_KEY;
@@ -38,9 +39,21 @@ const App = () => {
 
   return (
     <div>
-      <Titles />
-      <Form getWeather={getWeather} />
-      <Weather state={state} />
+      <div className="wrapper">
+        <div className="main">
+          <div className="container">
+            <div className="row">
+              <div className="cols-xs-5 title-container">
+                <Titles />
+              </div>
+              <div className="cols-xs-7 form-container">
+                <Form getWeather={getWeather} />
+                <Weather state={state} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
