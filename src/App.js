@@ -41,15 +41,13 @@ const App = () => {
     <div>
       <div className="wrapper">
         <div className="main">
-          <div className="container">
-            <div className="row">
-              <div className="cols-xs-5 title-container">
-                <Titles />
-              </div>
-              <div className="cols-xs-7 form-container">
-                <Form getWeather={getWeather} />
-                <Weather state={state} />
-              </div>
+          <div className="container1">
+            <div className="title-container">
+              <Titles />
+            </div>
+            <div className="form-container">
+              <Form getWeather={getWeather} />
+              <Weather state={state} />
             </div>
           </div>
         </div>
